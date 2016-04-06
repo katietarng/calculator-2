@@ -24,23 +24,26 @@ def calculator():
             if split_list[0] == "+":
                 added_numbers = add(split_list[1], split_list[2])
                 print added_numbers
-            """elif split_list[0] == "-":
-                subt_numbers = subtract()
+            elif split_list[0] == "-":
+                subt_numbers = subtract(split_list[1], split_list[2])
                 print subt_numbers
             elif split_list[0] == "*":
-                mult_numbers = multiply()
+                mult_numbers = multiply(split_list[1], split_list[2])
                 print mult_numbers
             elif split_list[0] == "/":
-                div_numbers = divide()
+                div_numbers = divide(split_list[1], split_list[2])
                 print div_numbers
             elif split_list[0] == "power":
-                power_numbers = power()
+                power_numbers = power(split_list[1], split_list[2])
+                print power_numbers
             elif split_list[0] == "mod":
-       
+                mod_numbers = mod(split_list[1], split_list[2])
+                print mod_numbers
             elif split_list[0] == "square":
-                square_numbers = square()
+                square_numbers = square(split_list[1])
                 print square_numbers
-            # elif split_list[0] == "cube":
-        """
+            elif split_list[0] == "cube":
+                cube_numbers = cube(split_list[1])
+                print cube_numbers
 
 calculator()
