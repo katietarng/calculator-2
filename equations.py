@@ -1,34 +1,55 @@
-def add(num1, num2):
-    return num1 + num2
+def add(num_list):
+    summ = num_list[0]
+    num_list = num_list[1:]
+    for num in num_list: 
+        summ += num
+    return summ
 
 
-def subtract(num1, num2):
-    return num1 - num2
+def subtract(num_list):
+    subt = num_list[0]
+    num_list = num_list[1:]
+    for num in num_list:
+        subt -= num
+    return subt
+
+def multiply(num_list):
+    product = 1
+    for num in num_list:
+        product *= num 
+    return product
+
+def divide(num_list):
+    quotient = num_list[0]
+    num_list = num_list[1:]
+    for num in num_list:
+        quotient /= num
+    return quotient
 
 
-def multiply(num1, num2):
-    return num1 * num2
+def square(num_list):
+    double_list = []
+    for num in num_list:
+        double = num*num
+        double_list.append(double)
+    return double_list
 
+def cube(num_list):
+    cube_list = []
+    for num in num_list:
+        cube = num*num*num
+        cube_list.append(cube)
+    return cube_list
 
-def divide(num1, num2):
-    # Need to turn at least argument to float for division to
-    # not be integer division
-    return float(num1) / float(num2) 
-
-
-def square(num1):
-    # Needs only one argument
-    return num1 * num1
-
-
-def cube(num1):
-    # Needs only one argument
-    return num1 * num1 * num1
-
-
-def power(num1, num2):
-    return num1 ** num2  # ** = exponent operator
-
+def power(num_list):
+    power_list = []
+    base = num_list[::2]
+    exponent = num_list[1::2]
+    #Loop through index of base list and match to index of exponent list
+    for i in range(len(base)):
+        power_num = base[i]**exponent[i]
+        power_list.append(power_num)
+    return power_list 
 
 def mod(num1, num2):
     return num1 % num2
