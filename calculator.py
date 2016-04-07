@@ -44,7 +44,8 @@ def calculator():
                 power_numbers = power(split_list)
                 print power_numbers
             elif split_list[0] == "mod":
-                mod_numbers = mod(split_list[1], split_list[2])
+                split_list = split_list[1:]
+                mod_numbers = mod(split_list)
                 print mod_numbers
             elif split_list[0] == "square":
                 split_list = split_list[1:]

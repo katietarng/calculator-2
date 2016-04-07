@@ -5,7 +5,6 @@ def add(num_list):
         summ += num
     return summ
 
-
 def subtract(num_list):
     subt = num_list[0]
     num_list = num_list[1:]
@@ -25,7 +24,6 @@ def divide(num_list):
     for num in num_list:
         quotient /= num
     return quotient
-
 
 def square(num_list):
     double_list = []
@@ -51,5 +49,12 @@ def power(num_list):
         power_list.append(power_num)
     return power_list 
 
-def mod(num1, num2):
-    return num1 % num2
+def mod(num_list):
+    mod_list = []
+    mod1 = num_list[::2]
+    mod2 = num_list[1::2]
+    #Loop through index of mod1 list and match to index of mod2 list
+    for i in range(len(mod1)):
+        remainder = mod1[i]%mod2[i]
+        mod_list.append(remainder)
+    return mod_list
