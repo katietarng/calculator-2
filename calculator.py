@@ -15,37 +15,44 @@ def calculator():
         split_list = input_numbers.split(" ") #splits input into list
 
         #Loop through list to change indices 1+ to integer
-        for i in range(len(split_list)): 
+        for i in range(len(split_list)):
             if i > 0:
-                split_list[i] = int(split_list[i])
+                split_list[i] = float(split_list[i])
 
         if input_numbers == "q": #Allowing user to quit out of program
             break
         #Conditions for different operations
         else: 
             if split_list[0] == "+":
-                added_numbers = add(split_list[1], split_list[2])
+                split_list = split_list[1:]
+                added_numbers = add(split_list)
                 print added_numbers
             elif split_list[0] == "-":
-                subt_numbers = subtract(split_list[1], split_list[2])
+                split_list = split_list[1:]
+                subt_numbers = subtract(split_list)
                 print subt_numbers
             elif split_list[0] == "*":
-                mult_numbers = multiply(split_list[1], split_list[2])
+                split_list = split_list[1:]
+                mult_numbers = multiply(split_list)
                 print mult_numbers
             elif split_list[0] == "/":
-                div_numbers = divide(split_list[1], split_list[2])
+                split_list = split_list[1:]
+                div_numbers = divide(split_list)
                 print div_numbers
             elif split_list[0] == "power":
-                power_numbers = power(split_list[1], split_list[2])
+                split_list = split_list[1:]
+                power_numbers = power(split_list)
                 print power_numbers
             elif split_list[0] == "mod":
                 mod_numbers = mod(split_list[1], split_list[2])
                 print mod_numbers
             elif split_list[0] == "square":
-                square_numbers = square(split_list[1])
+                split_list = split_list[1:]
+                square_numbers = square(split_list)
                 print square_numbers
             elif split_list[0] == "cube":
-                cube_numbers = cube(split_list[1])
+                split_list = split_list[1:]
+                cube_numbers = cube(split_list)
                 print cube_numbers
 
 calculator()
